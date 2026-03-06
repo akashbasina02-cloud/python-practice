@@ -1,0 +1,8 @@
+# --- Input Section ---
+x, y = map(int, input().split())
+
+# --- Processing Section ---
+customers = x * y
+
+# --- Output Section ---
+print(customers)
