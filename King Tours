@@ -1,0 +1,8 @@
+# --- Input Section ---
+n, m = map(int, input().split())
+
+# --- Processing Section ---
+total_people = (n * 5) + (m * 7)
+
+# --- Output Section ---
+print(total_people)
