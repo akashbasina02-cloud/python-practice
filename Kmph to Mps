@@ -1,0 +1,3 @@
+km = int(input())
+mps = km * 5 / 18
+print("%.2f" % mps)
