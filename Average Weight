@@ -1,0 +1,9 @@
+# Read average weight and weights of two boys
+avg, w1, w2 = map(int, input().split())
+
+# Total weight of 3 boys = 3 × average
+# Weight of third boy = total weight − weight1 − weight2
+w3 = 3 * avg - w1 - w2
+
+# Print the weight of the third boy
+print(w3)
