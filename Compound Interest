@@ -1,0 +1,10 @@
+# Read P, R, T
+P = int(input())
+R = int(input())
+T = int(input())
+
+# Calculate Compound Interest
+CI = P * ((1 + R/100) ** T) - P
+
+# Print result with 2 decimal places
+print(f"{CI:.2f}")
