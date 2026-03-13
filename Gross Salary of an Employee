@@ -1,0 +1,11 @@
+import sys
+
+salary = float(sys.argv[1])
+hra = float(sys.argv[2])
+da = float(sys.argv[3])
+
+pf = salary * 0.12
+gross = salary + hra + da + pf
+
+print("%.2f" % pf)
+print("%.2f" % gross)
