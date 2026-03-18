@@ -1,0 +1,3 @@
+a = float(input())
+area = 6 * a * a
+print(area)
