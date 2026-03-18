@@ -1,0 +1,4 @@
+R = float(input())   # outer radius
+r = float(input())   # inner radius
+area = 3.14 * (R*R - r*r)
+print(area)
