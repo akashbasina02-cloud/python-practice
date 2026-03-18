@@ -1,0 +1,8 @@
+T = int(input())
+S = int(input())
+B = int(input())
+
+capacity_bytes = 2 * T * S * B * 512
+capacity_kb = capacity_bytes // 1024
+
+print(capacity_kb, "KB")
