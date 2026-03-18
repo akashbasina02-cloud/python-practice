@@ -1,0 +1,4 @@
+r = float(input())
+angle = float(input())
+area = (angle / 360) * 3.14 * r * r
+print(area)
