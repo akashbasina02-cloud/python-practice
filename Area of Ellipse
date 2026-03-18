@@ -1,0 +1,4 @@
+a = float(input())   # major axis
+b = float(input())   # minor axis
+area = 3.14 * a * b
+print(area)
