@@ -1,0 +1,4 @@
+n = int(input())     # number of sides
+s = float(input())   # side length
+area = (n * s * s) / (4 * (3.14 / n))
+print(area)
