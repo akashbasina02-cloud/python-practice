@@ -1,0 +1,4 @@
+r = float(input())
+l = float(input())   # slant height
+area = 3.14 * r * (r + l)
+print(area)
