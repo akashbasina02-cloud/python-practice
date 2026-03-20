@@ -1,0 +1,13 @@
+# rectangle
+l, b = map(float, input().split())
+rect = l * b
+
+# circle
+r = float(input())
+circle = 3.14 * r * r
+
+# square
+a = float(input())
+square = a * a
+
+print(max(rect, circle, square))
