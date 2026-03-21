@@ -1,0 +1,5 @@
+print(d / t)                   # speed
+print(s * t)                   # distance
+print(d / s)                   # time
+print(kmph * 5/18)             # kmph → mps
+print(mps * 18/5)              # mps → kmph
