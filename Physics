@@ -1,0 +1,7 @@
+print(v * i)                   # power
+print(v / i)                   # resistance
+print(i * r)                   # voltage
+print(0.5 * m * v * v)         # kinetic energy
+print(m * g * h)               # potential energy
+print(f * l)                   # wave speed
+print(1 / t)                   # frequency
