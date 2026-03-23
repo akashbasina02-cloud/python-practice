@@ -1,0 +1,18 @@
+# Read input from user
+n = int(input())
+
+# Check if number is odd
+if n % 2 != 0:
+    print("Weird")   # Odd numbers are always Weird
+
+# Check if number is even and between 2 to 5
+elif 2 <= n <= 5:
+    print("Not Weird")   # Even numbers in this range
+
+# Check if number is even and between 6 to 20
+elif 6 <= n <= 20:
+    print("Weird")   # Even numbers in this range are Weird
+
+# All remaining even numbers (>20)
+else:
+    print("Not Weird")
