@@ -1,0 +1,14 @@
+# Take a single character input and remove extra spaces
+char = input().strip()
+
+# Check if character is uppercase (A to Z)
+if char >= 'A' and char <= 'Z':
+    print("uppercase alphabet")
+
+# Check if character is lowercase (a to z)
+elif char >= 'a' and char <= 'z':
+    print("lowercase alphabet")
+
+# If it's neither uppercase nor lowercase
+else:
+    print("not an alphabet")
