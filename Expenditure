@@ -1,0 +1,12 @@
+# Read total money Akshat has
+x = int(input())
+
+# Read daily expenditure
+y = int(input())
+
+# Total money needed for 30 days = y * 30
+# If required money is greater than available money → not enough
+if y * 30 > x:
+    print("NO")   # Not enough money
+else:
+    print("YES")  # Enough money
