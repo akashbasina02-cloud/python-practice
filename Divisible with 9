@@ -1,0 +1,8 @@
+# Read input number
+x = int(input())
+
+# Check if number is divisible by 9
+if x % 9 == 0:
+    print("True")   # divisible by 9
+else:
+    print("False")  # not divisible by 9
