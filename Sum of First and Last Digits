@@ -1,0 +1,16 @@
+# Take input from user
+n = int(input())
+
+# Get the last digit using modulus operator
+last = n % 10
+
+# Loop to remove digits from the end
+# until only the first digit remains
+while n >= 10:
+    n = n // 10   # Integer division removes last digit
+
+# Now n contains the first digit
+first = n
+
+# Print the sum of first and last digits
+print(first + last)
