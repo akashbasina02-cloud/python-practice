@@ -1,0 +1,21 @@
+# Read two integers: 
+# N = online order cost
+# M = dining (restaurant) cost
+N, M = map(int, input().split())
+
+# Compare prices without using decimals:
+# Online price after 10% discount = 0.9 * N
+# Multiply both sides by 10 to avoid float:
+# 0.9N < M  →  9N < 10M
+
+if 9 * N < 10 * M:
+    # Online is cheaper
+    print("ONLINE")
+
+elif 9 * N > 10 * M:
+    # Dining is cheaper
+    print("DINING")
+
+else:
+    # Both cost the same
+    print("EITHER")
