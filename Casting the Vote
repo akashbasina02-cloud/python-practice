@@ -1,0 +1,10 @@
+# Read the age from user input
+age = int(input())
+
+# Check if age is greater than or equal to 18
+if age >= 18:
+    # If condition is true, person is eligible to vote
+    print("YES")
+else:
+    # If condition is false, person is not eligible to vote
+    print("NO")
