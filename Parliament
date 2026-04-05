@@ -1,0 +1,10 @@
+# Read total number of members (N) and members who voted in favour (X)
+N, X = map(int, input().split())
+
+# Check if votes in favour are at least half of the total members
+if X >= N / 2:
+    # Resolution is passed
+    print("YES")
+else:
+    # Resolution is not passed
+    print("NO")
