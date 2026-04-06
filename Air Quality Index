@@ -1,0 +1,8 @@
+# Take the AQI value as input
+x = int(input())
+
+# Check if AQI is strictly below 100
+if x < 100:
+    print("YES")  # Government kept AQI within limits
+else:
+    print("NO")   # AQI exceeded or reached the limit
