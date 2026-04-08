@@ -1,0 +1,13 @@
+# Take three inputs: X (required points), A (easy problems), B (hard problems)
+X, A, B = map(int, input().split())
+
+# Each easy problem = 1 point → A
+# Each hard problem = 2 points → B*2
+# Total points = A + (B * 2)
+
+if X <= A + B * 2:
+    # If total points >= required points
+    print("Qualify")
+else:
+    # If total points < required points
+    print("Not Qualify")
