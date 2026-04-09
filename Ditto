@@ -1,0 +1,14 @@
+# Take input values for X, Y, and P
+X, Y, P = map(int, input().split())
+
+# Calculate the absolute difference between X and Y
+# We use abs() to avoid negative values
+diff = abs(X - Y)
+
+# Each operation changes the difference by 2 * P
+# So, to make X and Y equal, the difference must be divisible by 2 * P
+
+if diff % (2 * P) == 0:
+    print("YES")   # Possible to make X and Y equal
+else:
+    print("NO")    # Not possible
