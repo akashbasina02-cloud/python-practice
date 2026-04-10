@@ -1,0 +1,24 @@
+# Read input character (color code)
+char = input()
+
+# Convert input to uppercase to handle case-insensitive input
+char = char.upper()
+
+# Check for each color code and print corresponding color name
+if char == 'V':
+    print("Violet")
+elif char == 'I':
+    print("Indigo")
+elif char == 'B':
+    print("Blue")
+elif char == 'G':
+    print("Green")
+elif char == 'Y':
+    print("Yellow")
+elif char == 'O':
+    print("Orange")
+elif char == 'R':
+    print("Red")
+else:
+    # If input does not match any valid color code
+    print(-1)1
