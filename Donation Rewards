@@ -1,0 +1,17 @@
+# Read the number of donations from user input
+x = int(input())
+
+# Check if donations are less than or equal to 3
+if x <= 3:
+    # If true, assign BRONZE badge
+    print("BRONZE")
+
+# Check if donations are between 4 and 6 (since >3 already handled)
+elif x <= 6:
+    # If true, assign SILVER badge
+    print("SILVER")
+
+# If donations are greater than 6
+else:
+    # Assign GOLD badge
+    print("GOLD")
