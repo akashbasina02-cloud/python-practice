@@ -1,0 +1,11 @@
+# Read cost price (CP) and selling price (SP)
+cp, sp = map(int, input().split())
+
+# Calculate profit
+profit = sp - cp
+
+# Calculate profit percentage
+profit_percent = (profit / cp) * 100
+
+# Print result with 2 decimal places
+print(f"{profit_percent:.2f}")
