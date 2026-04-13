@@ -1,0 +1,14 @@
+# Take three sides of the triangle as input
+a, b, c = map(int, input().split())
+
+# Check triangle validity conditions
+# Condition 1: sum of a and b should be greater than c
+# Condition 2: sum of a and c should be greater than b
+# Condition 3: sum of b and c should be greater than a
+
+if a + b > c and a + c > b and b + c > a:
+    # If all conditions are satisfied
+    print("Valid triangle")
+else:
+    # If any condition fails
+    print("Invalid triangle")
