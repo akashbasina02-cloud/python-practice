@@ -1,0 +1,8 @@
+# Read three numbers from input, convert them to integers
+numbers = list(map(int, input().split()))
+
+# Find the maximum number from the list
+largest = max(numbers)
+
+# Print the largest number
+print(largest)
