@@ -1,0 +1,5 @@
+# Read two incomes
+x, y = map(int, input().split())
+
+# Print absolute difference (donation amount)
+print(abs(x - y))
