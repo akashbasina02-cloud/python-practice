@@ -1,0 +1,20 @@
+# Read input
+a1, a2, a3, b1, b2, b3 = map(int, input().split())
+
+# Alice score
+alice = [a1, a2, a3]
+alice.sort(reverse=True)
+alice_score = alice[0] + alice[1]
+
+# Bob score
+bob = [b1, b2, b3]
+bob.sort(reverse=True)
+bob_score = bob[0] + bob[1]
+
+# Compare
+if alice_score > bob_score:
+    print("Alice")
+elif bob_score > alice_score:
+    print("Bob")
+else:
+    print("Tie")
