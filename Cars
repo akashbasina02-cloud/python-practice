@@ -1,0 +1,10 @@
+# Read number of friends
+c = int(input())
+
+# Each car can take maximum 4 people
+# If divisible by 4 → exact cars needed
+if c % 4 == 0:
+    print(c // 4)
+else:
+    # If not divisible → need one extra car
+    print(c // 4 + 1)
