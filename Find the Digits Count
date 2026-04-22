@@ -1,0 +1,9 @@
+n = int(input())   # take input number
+
+count = 0          # initialize digit counter
+
+while n > 0:       # loop until number becomes 0
+    n = n // 10    # remove last digit
+    count += 1     # increase count
+
+print(count)       # print total digits
