@@ -1,0 +1,14 @@
+# Read input number
+n = int(input())
+
+# Variable to store sum of digits
+total = 0
+
+# Loop until number becomes 0
+while n > 0:
+    digit = n % 10      # Extract last digit
+    total += digit      # Add digit to total
+    n = n // 10         # Remove last digit
+
+# Print the result
+print(total)
