@@ -1,0 +1,9 @@
+# Read three integers: N (table number), A (start), B (end)
+N, A, B = map(int, input().split())
+
+# Loop from A to B (inclusive)
+for i in range(A, B + 1):
+    
+    # Print multiplication in required format
+    # Example: 7 x 14 = 98
+    print(N, 'x', i, '=', N * i)
