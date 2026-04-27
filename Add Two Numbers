@@ -1,0 +1,7 @@
+# Read number of test cases
+T = int(input())
+
+# Loop through each test case
+for _ in range(T):
+    A, B = map(int, input().split())
+    print(A + B)
