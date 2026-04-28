@@ -1,0 +1,13 @@
+# Take input
+a, b = map(int, input().split())
+
+# Start from the maximum of a and b
+max_num = max(a, b)
+
+# Loop until we find LCM
+while True:
+    # Check if current number is divisible by both
+    if max_num % a == 0 and max_num % b == 0:
+        print(max_num)   # Found LCM
+        break
+    max_num += 1   # Move to next number
