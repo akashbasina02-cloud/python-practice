@@ -1,0 +1,8 @@
+# Read two integers A and B from user input
+X, Y = map(int, input().split())
+
+# Loop from A+1 to B-1 (both exclusive)
+for i in range(X + 1, Y):
+    
+    # Print the number, its square, and its cube
+    print(i, i * i, i * i * i)
