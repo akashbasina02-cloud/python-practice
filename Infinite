@@ -1,0 +1,12 @@
+# Infinite loop to keep taking input
+while True:
+    
+    # Read an integer from user
+    n = int(input())
+    
+    # Check if input is -1 (termination condition)
+    if n == -1:
+        break   # Exit the loop immediately
+    
+    # Print square of the number
+    print(n * n)
