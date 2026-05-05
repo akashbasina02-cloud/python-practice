@@ -1,0 +1,13 @@
+# Read input
+A = int(input())
+
+# Initialize result
+fact = 1
+
+# Calculate factorial
+while A > 0:
+    fact = fact * A
+    A = A - 1
+
+# Print result
+print(fact)
