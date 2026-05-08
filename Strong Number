@@ -1,0 +1,14 @@
+import math
+
+T = int(input())
+for _ in range(T):
+    n = int(input())
+    
+    # Sum of factorial of each digit
+    total = sum(math.factorial(int(d)) for d in str(n))
+    
+    # Check if sum equals original number
+    if total == n:
+        print("Strong")
+    else:
+        print("Not Strong")
