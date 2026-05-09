@@ -1,0 +1,9 @@
+# Read two integers A and B from input
+A, B = map(int, input().split())
+
+# Loop from B down to A
+# -1 means decreasing order
+for i in range(B, A - 1, -1):
+    
+    # Print numbers with space
+    print(i, end=" ")
