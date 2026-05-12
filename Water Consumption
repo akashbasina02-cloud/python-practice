@@ -1,0 +1,14 @@
+# Read number of test cases
+t = int(input())
+
+# Loop through each test case
+for i in range(t):
+
+    # Read the value of x
+    x = int(input())
+
+    # Check if x is greater than or equal to 2000
+    if x >= 2000:
+        print("YES")
+    else:
+        print("NO")
