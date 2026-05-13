@@ -1,0 +1,22 @@
+# Read the input number
+n = int(input())
+
+# Store the original number
+temp = n
+
+# Divide the number by 2, 3, and 5 repeatedly
+while temp % 2 == 0:
+    temp = temp // 2
+
+while temp % 3 == 0:
+    temp = temp // 3
+
+while temp % 5 == 0:
+    temp = temp // 5
+
+# If the final result becomes 1,
+# then the number is an Ugly Number
+if temp == 1:
+    print("Ugly Number")
+else:
+    print("Not Ugly Number")
