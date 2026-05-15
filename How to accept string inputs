@@ -1,0 +1,11 @@
+# Accept 2 space separated strings
+A, B = input().split()
+
+# Accept 3 space separated strings
+C, D, E = input().split()
+
+# Accept 4 space separated strings
+F, G, H, I = input().split()
+
+# Print all strings in a single line
+print(A, B, C, D, E, F, G, H, I)
