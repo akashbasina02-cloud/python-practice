@@ -1,0 +1,13 @@
+# Read number of test cases
+t = int(input())
+
+# Loop through each test case
+for _ in range(t):
+    # Read X (weeks) and Y (cost per week)
+    X, Y = map(int, input().split())
+    
+    # Calculate total tuition fees
+    total_fees = X * Y
+    
+    # Print the result for this test case
+    print(total_fees)
