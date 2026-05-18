@@ -1,0 +1,8 @@
+# Store the string "Akash" in the variable name
+name = "Akash"
+
+# Loop through each character in the string
+for ch in name:
+    
+    # Print each character one by one
+    print(ch)
