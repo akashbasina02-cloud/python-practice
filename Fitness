@@ -1,0 +1,15 @@
+# Read number of test cases
+t = int(input())
+
+# Loop through each test case
+for i in range(t):
+
+    # Read distance from home to office
+    x = int(input())
+
+    # Daily travel = go + return = 2 * x
+    # Weekly travel for 5 days = 2 * x * 5
+    total_distance = 10 * x
+
+    # Print total distance travelled in a week
+    print(total_distance)
