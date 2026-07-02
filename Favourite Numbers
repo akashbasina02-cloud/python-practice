@@ -1,0 +1,17 @@
+# Read number of test cases
+t = int(input())
+
+for _ in range(t):
+    a = int(input())
+
+    # Check if Alice likes the number
+    if a % 2 == 0 and a % 7 == 0:
+        print("Alice")
+
+    # Check if Bob likes the number
+    elif a % 2 != 0 and a % 9 == 0:
+        print("Bob")
+
+    # Otherwise Charlie takes it
+    else:
+        print("Charlie")
