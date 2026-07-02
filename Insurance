@@ -1,0 +1,11 @@
+# Read the number of test cases
+t = int(input())
+
+# Process each test case
+for _ in range(t):
+
+    # Read X and Y as a list
+    a = list(map(int, input().split()))
+
+    # Print the smaller value
+    print(min(a[0], a[1]))
