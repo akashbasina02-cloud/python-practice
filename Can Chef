@@ -1,0 +1,15 @@
+# Read the number of test cases
+t = int(input())
+
+# Loop through each test case
+for _ in range(t):
+
+    # Read X (liters of petrol) and Y (one-way distance) as a list
+    a = list(map(int, input().split()))
+
+    # Maximum distance Chef can travel = X * 15
+    # Total distance needed = 2 * Y (go and return)
+    if a[0] * 15 >= 2 * a[1]:
+        print("YES")
+    else:
+        print("NO")
