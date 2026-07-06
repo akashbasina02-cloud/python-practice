@@ -1,0 +1,31 @@
+# Problems in your to-do list
+# CodeChef
+#
+# Approach:
+# 1. Read the number of test cases.
+# 2. For each test case:
+#    - Read the number of problems (N).
+#    - Read the difficulty ratings.
+#    - Count how many ratings are greater than or equal to 1000.
+# 3. Print the count for each test case.
+#
+# Time Complexity: O(N) per test case
+# Space Complexity: O(1) extra space
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+
+    # Read the number of problems (not directly used)
+    N = int(input())
+
+    # Read all difficulty ratings
+    difficulties = map(int, input().split())
+
+    # Count problems with difficulty >= 1000
+    remove_count = sum(difficulty >= 1000 for difficulty in difficulties)
+
+    # Print the answer
+    print(remove_count)
