@@ -1,0 +1,31 @@
+# -----------------------------------------
+# Problem: High Accuracy
+# Platform: CodeChef
+# Language: Python 3
+#
+# Approach:
+# Calculate the minimum number of incorrect answers
+# using the mathematical relation:
+# Incorrect = 3 × ceil(X / 3) - X
+#
+# Time Complexity : O(1) per test case
+# Space Complexity: O(1)
+# -----------------------------------------
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+
+    # Read Chef's score
+    X = int(input())
+
+    # Minimum number of correct answers needed
+    correct = (X + 2) // 3
+
+    # Calculate the minimum incorrect answers
+    incorrect = 3 * correct - X
+
+    # Print the result
+    print(incorrect)
