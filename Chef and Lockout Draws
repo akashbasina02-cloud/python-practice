@@ -1,0 +1,20 @@
+t = int(input())
+
+for _ in range(t):
+    # Read problem point values
+    a, b, c = map(int, input().split())
+
+    # Calculate total points
+    s = a + b + c
+
+    # Draw is impossible if total points are odd
+    if s % 2:
+        print("NO")
+
+    # Draw is possible if one problem value equals half of the total points
+    elif a == s // 2 or b == s // 2 or c == s // 2:
+        print("YES")
+
+    # Otherwise, a draw is not possible
+    else:
+        print("NO")
