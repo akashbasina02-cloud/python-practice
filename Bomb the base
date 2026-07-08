@@ -1,0 +1,29 @@
+# Bomb the Base - CodeChef
+# Time Complexity: O(N) per test case
+# Space Complexity: O(1) extra space
+
+# Read the number of test cases
+t = int(input())
+
+for _ in range(t):
+
+    # Read the number of houses and bomb attack strength
+    n, x = map(int, input().split())
+
+    # Read the defense strength of each house
+    l = list(map(int, input().split()))
+
+    # Stores the maximum number of houses that can be destroyed
+    a = 0
+
+    # Traverse all houses
+    for i in range(n):
+
+        # Check if the current house can be destroyed
+        if l[i] < x:
+
+            # Update the answer with the current house number (1-based indexing)
+            a = i + 1
+
+    # Print the maximum number of houses destroyed
+    print(a)
