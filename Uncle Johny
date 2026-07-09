@@ -1,0 +1,11 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())          # Read N
+    l = list(map(int, input().split()))
+    k = int(input())
+
+    song = l[k - 1]           # Uncle Johny's song length (K is 1-indexed)
+    l.sort()
+
+    print(l.index(song) + 1)  # Position after sorting (1-indexed)
