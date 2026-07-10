@@ -1,0 +1,26 @@
+# Maximum Alternating Sum
+# Platform: CodeChef
+# Difficulty: 1111
+#
+# Approach:
+# 1. Sort the array.
+# 2. The smallest n//2 elements contribute negatively.
+# 3. The remaining largest elements contribute positively.
+# 4. Answer = sum(largest elements) - sum(smallest elements).
+#
+# Time Complexity: O(N log N)
+# Space Complexity: O(1) (excluding the input array)
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()))
+
+    arr.sort()
+
+    negative = n // 2
+
+    answer = sum(arr[negative:]) - sum(arr[:negative])
+
+    print(answer)
