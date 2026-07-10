@@ -1,0 +1,22 @@
+# Seated Together
+# ----------------
+# A bus has 100 seats arranged in 20 rows with 5 seats in each row.
+# Chef sits in seat X and Chefina sits in seat X + 1.
+# They can talk only if both seats are in the same row.
+#
+# Observation:
+# - Every row ends at seat numbers that are multiples of 5.
+# - If X is a multiple of 5, then X is the last seat of a row,
+#   and X + 1 is the first seat of the next row.
+# - Otherwise, both seats belong to the same row.
+
+# Read Chef's seat number
+x = int(input())
+
+# Check if Chef's seat is the last seat in a row
+if x % 5 == 0:
+    # Chefina is in the next row
+    print("No")
+else:
+    # Both seats are in the same row
+    print("Yes")
