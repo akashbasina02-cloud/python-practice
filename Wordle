@@ -1,0 +1,28 @@
+# Read the number of test cases
+t = int(input())
+
+# Process each test case
+for _ in range(t):
+
+    # Read the hidden word
+    s = input()
+
+    # Read the guessed word
+    g = input()
+
+    # Store the result (G/B string)
+    ans = ""
+
+    # Compare each of the 5 characters
+    for i in range(5):
+
+        # If characters match, add 'G'
+        if s[i] == g[i]:
+            ans += "G"
+
+        # Otherwise, add 'B'
+        else:
+            ans += "B"
+
+    # Print the final result for the current test case
+    print(ans)
