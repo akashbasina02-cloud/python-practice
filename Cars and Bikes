@@ -1,0 +1,16 @@
+# Read the number of test cases
+t = int(input())
+
+# Process each test case
+for _ in range(t):
+
+    # Read the total number of tyres
+    n = int(input())
+
+    # After making the maximum number of cars,
+    # the remaining tyres are n % 4.
+    # If 2 tyres remain, one bike can be made.
+    if n % 4 == 2:
+        print("YES")
+    else:
+        print("NO")
