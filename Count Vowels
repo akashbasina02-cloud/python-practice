@@ -1,0 +1,21 @@
+# Read the input string
+s = input()
+
+# Initialize index variable
+i = 0
+
+# Variable to store the count of vowels
+count = 0
+
+# Traverse the string using a while loop
+while i < len(s):
+
+    # Check if the current character is a vowel
+    if s[i] in "aeiou":
+        count += 1
+
+    # Move to the next character
+    i += 1
+
+# Print the total number of vowels
+print(count)
