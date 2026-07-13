@@ -1,0 +1,17 @@
+# Read the size of the array
+n = int(input())
+
+# Read the array elements
+l = list(map(int, input().split()))
+
+# Traverse the array from the last index to the first
+for i in range(n - 1, -1, -1):
+
+    # Check if the current element is even
+    if l[i] % 2 == 0:
+
+        # Print the index of the last even element
+        print(i)
+
+        # Stop the loop after finding the last even element
+        break
