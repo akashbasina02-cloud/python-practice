@@ -1,0 +1,42 @@
+# Read the number of test cases
+t = int(input())
+
+# Define all vowels
+vowels = "aeiou"
+
+# Process each test case
+for _ in range(t):
+
+    # Read the length of the string (not required in the logic)
+    n = int(input())
+
+    # Read the word
+    s = input()
+
+    # Variable to count consecutive consonants
+    count = 0
+
+    # Assume the word is easy to pronounce
+    easy = True
+
+    # Traverse each character in the word
+    for ch in s:
+
+        # Check if the character is a vowel
+        if ch in vowels:
+            # Reset the consonant count
+            count = 0
+        else:
+            # Increase consecutive consonant count
+            count += 1
+
+            # If 4 or more consecutive consonants are found
+            if count >= 4:
+                easy = False
+                break
+
+    # Print the result
+    if easy:
+        print("YES")
+    else:
+        print("NO")
