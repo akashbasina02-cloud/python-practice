@@ -1,0 +1,10 @@
+# Read the number of wins, draws, and losses
+A, B, C = map(int, input().split())
+
+# Each win = 3 points
+# Each draw = 1 point
+# Each loss = 0 points
+points = (A * 3) + B
+
+# Print the total points
+print(points)
