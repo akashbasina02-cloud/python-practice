@@ -1,0 +1,15 @@
+import math  # Import math module to use sqrt() function
+
+# Read two integers A and B
+A, B = map(int, input().split())
+
+# Variable to store the sum of square roots
+total = 0
+
+# Loop from A to B (inclusive)
+for i in range(A, B + 1):
+    # Add the square root of the current number to total
+    total += math.sqrt(i)
+
+# Print the result with exactly 2 digits after the decimal point
+print("%.2f" % total)
