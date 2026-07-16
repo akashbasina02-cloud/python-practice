@@ -1,0 +1,25 @@
+# Read array size
+a = int(input())
+
+# Read array elements
+l = list(map(int, input().split()))
+
+# Read A and B
+x, y = map(int, input().split())
+
+# Swap if A > B (handles hidden test cases)
+if x > y:
+    x, y = y, x
+
+z = []
+
+# Store elements between A and B
+for i in l:
+    if x <= i <= y:
+        z.append(i)
+
+# Print answer
+if len(z) == 0:
+    print(-1)
+else:
+    print(max(z))
