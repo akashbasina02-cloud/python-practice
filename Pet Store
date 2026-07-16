@@ -1,0 +1,39 @@
+# Read the number of test cases
+t = int(input())
+
+# Process each test case
+for _ in range(t):
+
+    # Read the number of animals
+    n = int(input())
+
+    # Read the types of animals
+    animals = list(map(int, input().split()))
+
+    # Dictionary to store the frequency of each animal type
+    freq = {}
+
+    # Count how many times each animal type appears
+    for animal in animals:
+        if animal in freq:
+            freq[animal] += 1
+        else:
+            freq[animal] = 1
+
+    # Assume it is possible initially
+    possible = True
+
+    # Check the frequency of every animal type
+    for count in freq.values():
+
+        # If any frequency is odd,
+        # it cannot be divided equally between Alice and Bob
+        if count % 2 != 0:
+            possible = False
+            break
+
+    # Print the result
+    if possible:
+        print("YES")
+    else:
+        print("NO")
