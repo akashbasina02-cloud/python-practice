@@ -1,0 +1,15 @@
+# Read the size of the array
+n = int(input())
+
+# Read the array elements
+arr = list(map(int, input().split()))
+
+# Print all odd elements first
+for i in arr:
+    if i % 2 != 0:
+        print(i, end=" ")
+
+# Print all even elements next
+for i in arr:
+    if i % 2 == 0:
+        print(i, end=" ")
