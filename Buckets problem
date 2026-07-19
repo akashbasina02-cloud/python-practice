@@ -1,0 +1,48 @@
+# Read number of buckets
+n = int(input())
+
+# Read number of tasks
+t = int(input())
+
+# State of buckets
+# 0 = all empty
+# 1 = all filled
+# 2 = only odd buckets filled
+# 3 = only even buckets filled
+state = 0
+
+# Perform each task
+for i in range(t):
+    task = int(input())
+
+    if task == 1:
+        # Fill all buckets
+        state = 1
+
+    elif task == 2:
+        # Empty even buckets
+        if state == 1:
+            state = 2
+        elif state == 3:
+            state = 0
+
+    elif task == 3:
+        # Empty odd buckets
+        if state == 1:
+            state = 3
+        elif state == 2:
+            state = 0
+
+    elif task == 4:
+        # Empty all buckets
+        state = 0
+
+# Print the number of filled buckets
+if state == 0:
+    print(0)
+elif state == 1:
+    print(n)
+elif state == 2:
+    print((n + 1) // 2)   # Number of odd buckets
+elif state == 3:
+    print(n // 2)         # Number of even buckets
