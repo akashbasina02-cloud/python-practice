@@ -1,0 +1,29 @@
+# Read the amount of money (n) and required white cows (x)
+n, x = map(int, input().split())
+
+# Read the colors of 10 cows
+# 0 = White Cow, 1 = Black Cow
+a = list(map(int, input().split()))
+
+# Variable to count white cows Krishna can buy
+count = 0
+
+# Check each of the 10 cows
+for i in range(10):
+
+    # Cow price is its position (1st cow = 1, 2nd = 2, ..., 10th = 10)
+    # Krishna can buy only if the price is within his budget
+    if i + 1 <= n:
+
+        # If the cow is white
+        if a[i] == 0:
+            count += 1
+    else:
+        # Stop checking when the cow price exceeds the budget
+        break
+
+# Check if Krishna got enough white cows
+if count >= x:
+    print("Happy")
+else:
+    print("Sad")
