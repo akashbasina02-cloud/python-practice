@@ -1,0 +1,29 @@
+# Read the number of test cases
+t = int(input())
+
+for _ in range(t):
+
+    # Read N (number of players) and K (Chef's position)
+    n, k = map(int, input().split())
+
+    # Read the starting positions of all players
+    arr = list(map(int, input().split()))
+
+    # Store the best answer (-1 means no player can capture Chef)
+    ans = -1
+
+    # Check every player
+    for p in arr:
+
+        # A player can capture Chef only if:
+        # 1. The player starts before Chef (p < k)
+        # 2. Chef's position is divisible by p
+        if p < k and k % p == 0:
+
+            # Choose the largest valid position because
+            # it reaches Chef in the fewest moves
+            if p > ans:
+                ans = p
+
+    # Print the answer
+    print(ans)
