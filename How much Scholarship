@@ -1,0 +1,14 @@
+# Read the rank
+r = int(input())
+
+# Rank 1 to 50 gets 100% scholarship
+if r <= 50:
+    print(100)
+
+# Rank 51 to 100 gets 50% scholarship
+elif r <= 100:
+    print(50)
+
+# All other ranks get no scholarship
+else:
+    print(0)
