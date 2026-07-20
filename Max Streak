@@ -1,0 +1,54 @@
+# Read the number of test cases
+t = int(input())
+
+# Process each test case
+for _ in range(t):
+
+    # Read the number of days
+    n = int(input())
+
+    # Read Om's daily solved problems
+    om_list = list(map(int, input().split()))
+
+    # Read Addy's daily solved problems
+    addy_list = list(map(int, input().split()))
+
+    # -----------------------------
+    # Find Om's maximum streak
+    # -----------------------------
+    current_om = 0      # Current consecutive streak
+    max_om = 0          # Maximum streak
+
+    for i in range(n):
+
+        # If Om solved at least one problem
+        if om_list[i] != 0:
+            current_om += 1              # Increase current streak
+            max_om = max(max_om, current_om)   # Update maximum streak
+        else:
+            current_om = 0               # Streak breaks
+
+    # -----------------------------
+    # Find Addy's maximum streak
+    # -----------------------------
+    current_addy = 0
+    max_addy = 0
+
+    for i in range(n):
+
+        # If Addy solved at least one problem
+        if addy_list[i] != 0:
+            current_addy += 1
+            max_addy = max(max_addy, current_addy)
+        else:
+            current_addy = 0
+
+    # -----------------------------
+    # Compare maximum streaks
+    # -----------------------------
+    if max_om > max_addy:
+        print("Om")
+    elif max_addy > max_om:
+        print("Addy")
+    else:
+        print("Draw")
