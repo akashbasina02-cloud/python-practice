@@ -1,0 +1,25 @@
+# Read input
+n1 = int(input())
+n2 = int(input())
+
+# Total warriors killed in the first two days
+total = n1 + n2
+
+# Function to check if a number is prime
+def is_prime(n):
+    if n <= 1:
+        return False
+
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+
+    return True
+
+# Find the next prime number
+next_prime = total + 1
+while not is_prime(next_prime):
+    next_prime += 1
+
+# Minimum warriors to kill on Day 3
+print(next_prime - total)
