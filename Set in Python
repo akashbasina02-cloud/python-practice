@@ -1,0 +1,14 @@
+# Read elements of first set
+a = set(map(int, input("Enter elements of Set A: ").split()))
+
+# Read elements of second set
+b = set(map(int, input("Enter elements of Set B: ").split()))
+
+# Union
+print("Union:", a.union(b))
+
+# Intersection
+print("Intersection:", a.intersection(b))
+
+# Difference (A - B)
+print("Difference (A - B):", a.difference(b))
