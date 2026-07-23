@@ -1,0 +1,34 @@
+# Read the input number
+n = int(input())
+
+# Special case:
+# If the number is 0, product = 0 and sum = 0
+# So, answer = 0
+if n == 0:
+    print(0)
+
+else:
+    # Initialize product as 1
+    p = 1
+
+    # Initialize sum as 0
+    s = 0
+
+    # Process each digit of the number
+    while n > 0:
+
+        # Extract the last digit
+        digit = n % 10
+
+        # Add the digit to the sum
+        s += digit
+
+        # Multiply the digit with the product
+        p *= digit
+
+        # Remove the last digit
+        n //= 10
+
+    # Print the difference between
+    # product of digits and sum of digits
+    print(p - s)
