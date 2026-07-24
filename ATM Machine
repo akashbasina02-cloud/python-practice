@@ -1,0 +1,27 @@
+# Read the number of test cases
+t = int(input())
+
+# Process each test case
+for _ in range(t):
+
+    # Read number of people (n) and money in ATM (k)
+    n, k = map(int, input().split())
+
+    # Read the withdrawal amounts
+    arr = list(map(int, input().split()))
+
+    # Store the result as a string
+    ans = ""
+
+    # Check each person's withdrawal request
+    for money in arr:
+
+        # If ATM has enough money
+        if k >= money:
+            ans += "1"      # Withdrawal successful
+            k -= money      # Deduct the withdrawn amount
+        else:
+            ans += "0"      # Withdrawal failed
+
+    # Print the result for this test case
+    print(ans)
