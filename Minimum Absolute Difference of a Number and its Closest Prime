@@ -1,0 +1,40 @@
+# Read the input number
+n = int(input())
+
+# Function to check whether a number is prime or not
+def prime(x):
+    # Numbers less than 2 are not prime
+    if x < 2:
+        return False
+
+    # Check divisibility up to square root of x
+    for i in range(2, int(x ** 0.5) + 1):
+        if x % i == 0:
+            return False
+
+    # If no divisor is found, it is prime
+    return True
+
+# If the given number is already prime
+if prime(n):
+    print(0)
+
+else:
+    # Store the original number
+    original = n
+
+    # Find the next prime number
+    b = original
+    while not prime(b):
+        b += 1
+
+    # Find the previous prime number
+    c = original
+    while not prime(c):
+        c -= 1
+
+    # Find the minimum difference
+    ans = min(b - original, original - c)
+
+    # Print the answer
+    print(ans)
