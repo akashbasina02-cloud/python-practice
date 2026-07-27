@@ -1,0 +1,9 @@
+# Read the weight Chef lifts in the 1st set
+x = int(input())
+
+# In each new set, the weight increases by 10 kg.
+# So, the 3rd set weight = x + 20
+third_set = x + 20
+
+# Print the weight lifted in the 3rd set
+print(third_set)
