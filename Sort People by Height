@@ -1,0 +1,15 @@
+n = int(input())
+
+names = input().split()
+heights = list(map(int, input().split()))
+
+# Pair names and heights
+people = list(zip(heights, names))
+
+# Sort by height in descending order
+people.sort(reverse=True)
+
+# Extract names
+result = [name for height, name in people]
+
+print(result)
