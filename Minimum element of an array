@@ -1,0 +1,16 @@
+# Read the size of the array
+a = int(input())
+
+# Read the array elements
+n = list(map(int, input().split()))
+
+# Assume the first element is the minimum
+z = n[0]
+
+# Compare each element with the current minimum
+for i in n:
+    if i < z:
+        z = i
+
+# Print the minimum element
+print(z)
