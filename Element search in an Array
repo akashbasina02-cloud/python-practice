@@ -1,0 +1,14 @@
+# Read the size of the array
+n = int(input())
+
+# Read the array elements
+l = list(map(int, input().split()))
+
+# Read the element to search
+x = int(input())
+
+# Check if the element exists in the array
+if x in l:
+    print("True")
+else:
+    print("False")
