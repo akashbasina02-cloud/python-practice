@@ -1,0 +1,17 @@
+# Read the size of the array
+n = int(input())
+
+# Read the array elements
+arr = list(map(int, input().split()))
+
+# Print all even elements first
+for i in arr:
+    # Check if the element is even
+    if i % 2 == 0:
+        print(i, end=" ")
+
+# Print all odd elements after the even elements
+for i in arr:
+    # Check if the element is odd
+    if i % 2 != 0:
+        print(i, end=" ")
