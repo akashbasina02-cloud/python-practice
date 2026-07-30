@@ -1,0 +1,16 @@
+# Read Messi's goals, assists and Ronaldo's goals, assists
+A, B, X, Y = map(int, input().split())
+
+# Calculate Messi's points
+messi = (2 * A) + B
+
+# Calculate Ronaldo's points
+ronaldo = (2 * X) + Y
+
+# Compare the points and print the result
+if messi > ronaldo:
+    print("Messi")
+elif ronaldo > messi:
+    print("Ronaldo")
+else:
+    print("Equal")
