@@ -1,0 +1,22 @@
+# Read marks of five subjects
+p, c, b, m, cs = map(int, input().split())
+
+# Calculate total marks
+total = p + c + b + m + cs
+
+# Calculate percentage
+avg = total / 5
+
+# Check the grade based on percentage
+if avg >= 90:
+    print("Grade A")
+elif avg >= 80:
+    print("Grade B")
+elif avg >= 70:
+    print("Grade C")
+elif avg >= 60:
+    print("Grade D")
+elif avg >= 40:
+    print("Grade E")
+else:
+    print("Grade F")
