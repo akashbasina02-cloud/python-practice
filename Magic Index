@@ -1,0 +1,26 @@
+# Read the number of test cases
+t = int(input())
+
+# Process each test case
+for _ in range(t):
+
+    # Read the size of the array
+    n = int(input())
+
+    # Read the sorted array
+    arr = list(map(int, input().split()))
+
+    # Assume there is no magic index
+    magic_index = -1
+
+    # Check every index
+    for i in range(n):
+
+        # If array value is equal to its index,
+        # then it is a magic index
+        if arr[i] == i:
+            magic_index = i
+            break   # Stop after finding the first magic index
+
+    # Print the result
+    print(magic_index)
