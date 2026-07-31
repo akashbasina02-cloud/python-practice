@@ -1,0 +1,46 @@
+# Function to check if allocation is possible
+def can_allocate(arr, students, max_pages):
+    count = 1          # Start with first student
+    pages = 0
+
+    for book in arr:
+        # If adding this book exceeds max_pages,
+        # assign it to the next student
+        if pages + book > max_pages:
+            count += 1
+            pages = book
+
+            # More students required than available
+            if count > students:
+                return False
+        else:
+            pages += book
+
+    return True
+
+
+# Input
+n = int(input())
+arr = list(map(int, input().split()))
+k = int(input())
+
+# If students are more than books, allocation is impossible
+if k > n:
+    print(-1)
+else:
+    # Binary Search range
+    low = max(arr)      # At least one book with maximum pages
+    high = sum(arr)     # At most one student gets all books
+
+    answer = high
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        if can_allocate(arr, k, mid):
+            answer = mid
+            high = mid - 1   # Try for a smaller maximum
+        else:
+            low = mid + 1    # Increase the limit
+
+    print(answer)
