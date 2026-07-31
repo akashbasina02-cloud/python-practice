@@ -1,0 +1,12 @@
+# Read the current date (X) and current hour (H)
+x, h = map(int, input().split())
+
+# Calculate the number of full days Chef has been playing
+# Chef started on September 4 at 00:00
+days = x - 4
+
+# Total hours = (full days × 24) + current day's hours
+hours = days * 24 + h
+
+# Print the total number of hours Chef has been playing
+print(hours)
