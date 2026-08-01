@@ -1,0 +1,35 @@
+# Function to count pairs with distance <= mid
+def count_pairs(nums, mid):
+    count = 0
+    left = 0
+
+    for right in range(len(nums)):
+        while nums[right] - nums[left] > mid:
+            left += 1
+        count += right - left
+
+    return count
+
+
+# Read input
+n, k = map(int, input().split())
+nums = list(map(int, input().split()))
+
+# Sort the array
+nums.sort()
+
+# Binary search on possible distances
+low = 0
+high = nums[-1] - nums[0]
+
+while low < high:
+    mid = (low + high) // 2
+
+    # Check how many pairs have distance <= mid
+    if count_pairs(nums, mid) >= k:
+        high = mid
+    else:
+        low = mid + 1
+
+# Print the kth smallest distance
+print(low)
