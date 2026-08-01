@@ -1,0 +1,27 @@
+# Read the size of the array
+n = int(input())
+
+# Read the sorted array
+nums = list(map(int, input().split()))
+
+# Read the target value
+target = int(input())
+
+# Initialize binary search pointers
+low = 0
+high = n - 1
+
+# Perform binary search
+while low <= high:
+    mid = (low + high) // 2
+
+    if nums[mid] == target:
+        print(mid)
+        break
+    elif nums[mid] < target:
+        low = mid + 1
+    else:
+        high = mid - 1
+else:
+    # If target is not found, low is the insertion index
+    print(low)
