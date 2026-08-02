@@ -1,0 +1,13 @@
+# Read the number of notebooks (A) and pages per notebook (B)
+a, b = map(int, input().split())
+
+# Each page has:
+# 50 lines on the front side
+# 50 lines on the back side
+# So, each page can hold 100 lines.
+
+# Total lines = Number of notebooks × Pages per notebook × 100
+total_lines = a * b * 100
+
+# Print the total number of lines
+print(total_lines)
