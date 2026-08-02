@@ -1,0 +1,16 @@
+# Read the fixed cost (X), extra cost per km (Y), and total distance (Z)
+x, y, z = map(int, input().split())
+
+# If the distance is 50 km or less,
+# Chef only pays the fixed cost.
+if z <= 50:
+    print(x)
+else:
+    # Calculate the extra kilometers beyond 50 km
+    extra_km = z - 50
+
+    # Total cost = Fixed cost + (Extra kilometers × Cost per extra kilometer)
+    total_cost = x + (extra_km * y)
+
+    # Print the total amount to pay
+    print(total_cost)
