@@ -1,0 +1,16 @@
+# Read the input string
+s = input()
+
+# Split the string into individual words
+words = s.split()
+
+# Assume the first word has the minimum length
+minimum = len(words[0])
+
+# Compare the length of each word
+for word in words:
+    if len(word) < minimum:
+        minimum = len(word)
+
+# Print the minimum word length
+print(minimum)
