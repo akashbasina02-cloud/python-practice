@@ -1,0 +1,16 @@
+# Read the input string
+s = input()
+
+# Split the string into words
+words = s.split()
+
+# Assume the first word has the maximum length
+maximum = len(words[0])
+
+# Compare the length of each word
+for word in words:
+    if len(word) > maximum:
+        maximum = len(word)
+
+# Print the maximum word length
+print(maximum)
