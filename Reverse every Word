@@ -1,0 +1,12 @@
+# Read the input string
+s = input()
+
+# Split the string into words
+words = s.split()
+
+# Reverse each word
+for i in range(len(words)):
+    words[i] = words[i][::-1]
+
+# Join the reversed words with spaces and print
+print(" ".join(words))
