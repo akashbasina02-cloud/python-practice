@@ -1,0 +1,20 @@
+def next_higher_peak(heights):
+    n = len(heights)
+    ans = [-1] * n
+    stack = []
+
+    # Traverse from right to left
+    for i in range(n - 1, -1, -1):
+
+        # Remove all smaller or equal elements
+        while stack and stack[-1] <= heights[i]:
+            stack.pop()
+
+        # If stack is not empty, top is the next greater element
+        if stack:
+            ans[i] = stack[-1]
+
+        # Push current element
+        stack.append(heights[i])
+
+    return ans
