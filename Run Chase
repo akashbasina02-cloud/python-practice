@@ -1,0 +1,10 @@
+# Read the runs scored by the team batting first
+n = int(input())
+
+# Find the run rate using floor division
+# n // 20 gives the maximum whole-number run rate that is not enough
+# Add 1 because the second team must score strictly more than n runs
+run_rate = n // 20 + 1
+
+# Print the minimum integer run rate required to win
+print(run_rate)
