@@ -1,0 +1,9 @@
+# cook your dish here
+# Read N (cakes made) and M (cakes sold)
+N, M = map(int, input().split())
+
+# Calculate profit
+profit = (50 * M) - (30 * N)
+
+# Print the result
+print(profit)
