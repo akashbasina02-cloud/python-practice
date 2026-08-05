@@ -1,0 +1,13 @@
+# Read the size of the array
+n = int(input())
+
+# Read the array elements
+arr = list(map(int, input().split()))
+
+# Sort the array
+# First: by the number of 1's in the binary representation
+# Second: by the value itself (if the number of 1's is the same)
+arr.sort(key=lambda x: (bin(x).count('1'), x))
+
+# Print the sorted array
+print(*arr)
