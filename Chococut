@@ -1,0 +1,32 @@
+# cook your dish here
+
+n = int(input())
+
+for _ in range(n):
+    x, y, z = map(int, input().split())   # x = rows, y = columns, z = squares Bob needs
+
+    t = x * y   # total squares
+
+    # Bob needs 0 squares
+    if z == 0:
+        print(t)
+        continue
+
+    # Bob needs all squares
+    if z == t:
+        print(0)
+        continue
+
+    ans = 0
+
+    # Horizontal cut
+    r = (z + y - 1) // y   # minimum rows needed
+    if r <= x:
+        ans = max(ans, t - r * y)
+
+    # Vertical cut
+    c = (z + x - 1) // x   # minimum columns needed
+    if c <= y:
+        ans = max(ans, t - c * x)
+
+    print(ans)
