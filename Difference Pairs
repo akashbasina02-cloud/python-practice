@@ -1,0 +1,18 @@
+T = int(input())
+
+for _ in range(T):
+    N, B = map(int, input().split())
+    A = list(map(int, input().split()))
+
+    seen = set()
+    found = 0
+
+    for x in A:
+        # Check for a pair with difference B
+        if x - B in seen or x + B in seen:
+            found = 1
+            break
+
+        seen.add(x)
+
+    print(found)
