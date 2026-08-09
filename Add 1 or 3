@@ -1,0 +1,17 @@
+# Read number of test cases
+T = int(input())
+
+# Run for each test case
+for _ in range(T):
+
+    # Read N and M
+    N, M = map(int, input().split())
+
+    # Minimum value = N
+    # Maximum value = 3 * N
+    # Each +3 instead of +1 increases the total by 2
+    # So M - N must be even
+    if N <= M <= 3 * N and (M - N) % 2 == 0:
+        print("YES")
+    else:
+        print("NO")
