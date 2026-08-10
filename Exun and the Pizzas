@@ -1,0 +1,8 @@
+# Read N, K and R
+N, K, R = map(int, input().split())
+
+# Calculate remaining pizzas and their total revenue
+answer = (N - K) * R
+
+# Print the answer
+print(answer)
