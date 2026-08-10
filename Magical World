@@ -1,0 +1,29 @@
+# Magical World
+
+# Number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read length, width and blue square side
+    A, B, X = map(int, input().split())
+
+    # Area of red rectangle
+    red_area = A * B
+
+    # Area of blue square
+    blue_area = X * X
+
+    # Case 1:
+    # Red rectangle already has area <= blue square
+    if red_area <= blue_area:
+        print(0)
+
+    # Case 2:
+    # Change only one dimension to 1
+    elif A <= blue_area or B <= blue_area:
+        print(1)
+
+    # Case 3:
+    # Change both dimensions to 1
+    else:
+        print(2)
