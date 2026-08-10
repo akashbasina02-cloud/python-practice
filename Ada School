@@ -1,0 +1,24 @@
+# Ada School
+
+# Read number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read rows and columns
+    N, M = map(int, input().split())
+
+    # Total number of tables
+    total = N * M
+
+    # Every student has to move to an adjacent table.
+    # We can swap students in pairs of adjacent tables.
+    #
+    # If the total number of tables is even,
+    # all tables can be divided into pairs.
+    #
+    # If the total number is odd, one table will remain
+    # without a partner.
+    if total % 2 == 0:
+        print("YES")
+    else:
+        print("NO")
