@@ -1,0 +1,36 @@
+# Read number of rounds
+N = int(input())
+
+# Cumulative scores
+player1 = 0
+player2 = 0
+
+# Maximum lead found so far
+max_lead = 0
+
+# Winner of maximum lead
+winner = 0
+
+for _ in range(N):
+    # Read scores of both players in this round
+    S, T = map(int, input().split())
+
+    # Add the current round scores
+    player1 += S
+    player2 += T
+
+    # Calculate the current lead
+    if player1 > player2:
+        lead = player1 - player2
+        current_winner = 1
+    else:
+        lead = player2 - player1
+        current_winner = 2
+
+    # Update maximum lead
+    if lead > max_lead:
+        max_lead = lead
+        winner = current_winner
+
+# Print winner and maximum lead
+print(winner, max_lead)
