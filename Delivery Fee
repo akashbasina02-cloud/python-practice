@@ -1,0 +1,9 @@
+# Read food cost, delivery fee, and free-delivery limit
+A, B, K = map(int, input().split())
+
+# If food cost is at least K, delivery is free
+if A >= K:
+    print(A)
+else:
+    # Otherwise, add delivery fee
+    print(A + B)
