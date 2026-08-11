@@ -1,0 +1,19 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    
+    arrivals = list(map(int, input().split()))
+    departures = list(map(int, input().split()))
+    
+    time = [0] * 1440
+    
+    # Count arrivals and departures at each minute
+    for x in arrivals:
+        time[x] += 1
+    
+    for x in departures:
+        time[x] += 1
+    
+    # Maximum number of airplanes using runways at one time
+    print(max(time))
