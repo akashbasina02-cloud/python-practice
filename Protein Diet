@@ -1,0 +1,8 @@
+# Read the protein consumed (X) and required protein (Y)
+X, Y = map(int, input().split())
+
+# Check if the consumed protein is at least the required amount
+if X >= Y:
+    print("YES")
+else:
+    print("NO")
