@@ -1,0 +1,11 @@
+# Read the selling price, bun cost, and vegetable cost
+A, B, C = map(int, input().split())
+
+# Calculate the total cost of making one sandwich
+total_cost = B + C
+
+# Calculate profit or loss
+profit = A - total_cost
+
+# Print the result
+print(profit)
