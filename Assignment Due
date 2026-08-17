@@ -1,0 +1,8 @@
+# Read the number of days required and the days available
+X, Y = map(int, input().split())
+
+# Check if the assignment can be completed before the deadline
+if X <= Y:
+    print("YES")
+else:
+    print("NO")
