@@ -1,0 +1,8 @@
+# Read the current hour
+X = int(input())
+
+# Calculate the number of hours left until midnight
+hours_left = 24 - X
+
+# Print the result
+print(hours_left)
