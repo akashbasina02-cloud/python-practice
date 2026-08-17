@@ -1,0 +1,9 @@
+# Read the time taken to solve and number of wrong submissions
+X, Y = map(int, input().split())
+
+# Calculate the total time penalty
+# Each wrong submission adds 10 minutes
+penalty = X + (Y * 10)
+
+# Print the total penalty
+print(penalty)
