@@ -1,0 +1,9 @@
+# Take the number of push-ups Chef does every day
+X = int(input())
+
+# January has 31 days
+# Calculate total push-ups for the entire month
+total = X * 31
+
+# Print the total number of push-ups
+print(total)
