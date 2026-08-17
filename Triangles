@@ -1,0 +1,8 @@
+# Read the first and second angles
+A, B = map(int, input().split())
+
+# Calculate the third angle
+third_angle = 180 - A - B
+
+# Print the third angle
+print(third_angle)
