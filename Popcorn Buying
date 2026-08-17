@@ -1,0 +1,12 @@
+# Read the amount of money Chef has
+X = int(input())
+
+# Pay 100 rupees for the movie ticket
+money_left = X - 100
+
+# Each popcorn bucket costs 50 rupees
+# Use integer division to find the maximum number of buckets
+popcorn = money_left // 50
+
+# Print the number of popcorn buckets Chef can buy
+print(popcorn)
