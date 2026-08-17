@@ -1,0 +1,9 @@
+# Read the number of the rest day
+N = int(input())
+
+# Each rest day occurs after 3 days:
+# 2 workout days + 1 rest day
+total_days = N * 3
+
+# Print the total number of days
+print(total_days)
