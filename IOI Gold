@@ -1,0 +1,10 @@
+# Take Chef's score (N) and the gold cutoff (G) as input
+N, G = map(int, input().split())
+
+# Check if Chef's score is greater than or equal to the gold cutoff
+if N >= G:
+    # Chef gets a gold medal
+    print("Yes")
+else:
+    # Chef does not get a gold medal
+    print("No")
