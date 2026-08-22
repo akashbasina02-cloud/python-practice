@@ -1,0 +1,5 @@
+# Read number of left and right shoes
+L, R = map(int, input().split())
+
+# The difference is the number of missing shoes
+print(abs(L - R))
