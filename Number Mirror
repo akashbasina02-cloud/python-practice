@@ -1,0 +1,5 @@
+# Take the number as input
+N = input()
+
+# Print the same number
+print(N)
