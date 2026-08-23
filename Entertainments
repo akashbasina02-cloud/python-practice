@@ -1,0 +1,11 @@
+# Take the number of children
+N = int(input())
+
+# Cost of buying N toys
+toy_cost = N * 200
+
+# Cost of buying one television
+tv_cost = 1000
+
+# Print the minimum cost
+print(min(toy_cost, tv_cost))
