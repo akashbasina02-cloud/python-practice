@@ -1,0 +1,10 @@
+# Take the string as input
+A = input()
+
+# Check if the string starts with 's' OR ends with 's'
+if A[0] == 's' or A[-1] == 's':
+    # If either condition is true, the string is snaky
+    print("Yes")
+else:
+    # Otherwise, the string is not snaky
+    print("No")
