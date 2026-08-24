@@ -1,0 +1,14 @@
+# Take X, Y and K as input
+x, y, z = map(int, input().split())
+
+# Find the distance between X and Y
+if x >= y:
+    m = x - y
+else:
+    m = y - x
+
+# Check if the robot has enough battery to reach Y
+if m <= z:
+    print("YES")
+else:
+    print("NO")
