@@ -1,0 +1,33 @@
+# Read the string
+s = input()
+
+# Create a count array for 26 letters
+count = [0] * 26
+
+# Go through each character in the string
+for ch in s:
+
+    # Check if the character is an alphabet
+    if ch.isalpha():
+
+        # Convert uppercase to lowercase
+        ch = ch.lower()
+
+        # Find the position of the letter (a = 0, b = 1, ..., z = 25)
+        index = ord(ch) - ord('a')
+
+        # Increase the count of that letter
+        count[index] += 1
+
+# Find the highest frequency
+max_count = max(count)
+
+# Check letters from a to z
+for i in range(26):
+
+    # If this letter has the highest frequency
+    if count[i] == max_count:
+
+        # Convert index back to a letter and print it
+        print(chr(i + ord('a')))
+        break
