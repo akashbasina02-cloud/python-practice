@@ -1,0 +1,21 @@
+T = int(input())  # Read number of test cases
+
+for _ in range(T):
+
+    N = int(input())  # Read the length of the string
+    S = input()       # Read the binary string
+
+    answer = 0        # Stores the number of safe birds
+
+    # Check animals from left to right
+    for ch in S:
+
+        # If the animal is a bird
+        if ch == '0':
+            answer += 1  # This bird is safe
+
+        # If we find the first wolf
+        else:
+            break  # All birds after this wolf will be eaten
+
+    print(answer)  # Print number of safe birds
