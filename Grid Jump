@@ -1,0 +1,29 @@
+# cook your dish here
+
+T = int(input())
+
+for _ in range(T):
+    A, B, P, Q, R = map(int, input().split())
+
+    ans = 10**9
+
+    # Try using k diagonal moves
+    for k in range(min(A, B) + 1):
+
+        # Remaining distance after diagonal moves
+        right = A - k
+        up = B - k
+
+        # Number of right moves needed
+        right_moves = (right + 1) // 2
+
+        # Number of up moves needed
+        up_moves = (up + 1) // 2
+
+        # Total cost
+        cost = k * R + right_moves * P + up_moves * Q
+
+        if cost < ans:
+            ans = cost
+
+    print(ans)
