@@ -1,0 +1,11 @@
+# Read X and Y
+X, Y = map(int, input().split())
+
+# Chef can complete at most 10 worksheets
+total = X + (10 * Y)
+
+# Check if total questions are at least 100
+if total >= 100:
+    print("YES")
+else:
+    print("NO")
