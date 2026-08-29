@@ -1,0 +1,25 @@
+# Number of test cases
+T = int(input())
+
+# Set of vowels
+vowels = "AEIOU"
+
+target = "CODETOWN"
+
+for _ in range(T):
+    S = input().strip()
+
+    possible = True
+
+    # Check all 8 positions
+    for i in range(8):
+
+        # Check whether both characters are vowels
+        if (S[i] in vowels) != (target[i] in vowels):
+            possible = False
+            break
+
+    if possible:
+        print("YES")
+    else:
+        print("NO")
