@@ -1,0 +1,9 @@
+# cook your dish here
+# Take X and Y as input
+X, Y = map(int, input().split())
+
+# Calculate the total score
+score = X * 3 + Y * 2
+
+# Print the total score
+print(score)
