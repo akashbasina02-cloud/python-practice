@@ -1,0 +1,29 @@
+# Read number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read number of cities
+    N = int(input())
+
+    # Read 2*N candy prices
+    A = list(map(int, input().split()))
+
+    # Dictionary to store frequency of each price
+    freq = {}
+
+    for x in A:
+        freq[x] = freq.get(x, 0) + 1
+
+    valid = True
+
+    # If any price occurs more than twice,
+    # it cannot be split into two arrays with distinct elements
+    for count in freq.values():
+        if count > 2:
+            valid = False
+            break
+
+    if valid:
+        print("Yes")
+    else:
+        print("No")
