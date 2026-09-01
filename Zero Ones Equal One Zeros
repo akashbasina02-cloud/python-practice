@@ -1,0 +1,12 @@
+# Read number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read length of binary string
+    N = int(input())
+
+    # Put 0 at both ends
+    # Fill the middle with 1s
+    ans = "0" + "1" * (N - 2) + "0"
+
+    print(ans)
