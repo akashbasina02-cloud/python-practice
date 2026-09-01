@@ -1,0 +1,19 @@
+import math
+
+# Read number of test cases
+T = int(input())
+
+for _ in range(T):
+    X, Y = map(int, input().split())
+
+    # Already have a common divisor greater than 1
+    if math.gcd(X, Y) > 1:
+        print(0)
+
+    # Check if increasing either X or Y once is enough
+    elif math.gcd(X + 1, Y) > 1 or math.gcd(X, Y + 1) > 1:
+        print(1)
+
+    # Otherwise, increment both numbers
+    else:
+        print(2)
