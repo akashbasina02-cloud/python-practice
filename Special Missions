@@ -1,0 +1,28 @@
+# Read number of test cases
+T = int(input())
+
+for _ in range(T):
+    N, C = map(int, input().split())
+
+    A = list(map(int, input().split()))
+    S = input()
+
+    normal = 0
+    special = 0
+
+    # Calculate coins from normal and special missions
+    for i in range(N):
+        if S[i] == '0':
+            normal += A[i]
+        else:
+            special += A[i]
+
+    # Initially we can always earn coins from normal missions
+    answer = normal
+
+    # We can pay the wizard only if we have at least C coins
+    if normal >= C:
+        # Unlock special missions only if it gives extra profit
+        answer = max(answer, normal - C + special)
+
+    print(answer)
