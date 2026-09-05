@@ -1,0 +1,27 @@
+# Read number of test cases
+t = int(input())
+
+for _ in range(t):
+    # Read attack X and opponent health H
+    x, h = map(int, input().split())
+
+    # For first 5 turns, attack is halved
+    half_damage = x // 2
+
+    # Total damage possible in first 5 turns
+    first_five_damage = 5 * half_damage
+
+    if h <= first_five_damage:
+        # Enemy dies within first 5 turns
+        # Ceiling division to find required turns
+        turns = (h + half_damage - 1) // half_damage
+    else:
+        # Remove damage done in first 5 turns
+        h -= first_five_damage
+
+        # After 5 turns, full damage X is used
+        extra_turns = (h + x - 1) // x
+
+        turns = 5 + extra_turns
+
+    print(turns)
