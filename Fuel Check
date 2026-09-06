@@ -1,0 +1,11 @@
+# Read fuel amount X and fuel efficiency Y
+x, y = map(int, input().split())
+
+# Total distance the car can travel
+distance = x * y
+
+# Check whether Chef can travel at least 100 km
+if distance >= 100:
+    print("Yes")
+else:
+    print("No")
