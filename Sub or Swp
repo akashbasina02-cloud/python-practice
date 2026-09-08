@@ -1,0 +1,20 @@
+# Read number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read X and Y
+    X, Y = map(int, input().split())
+
+    # Find GCD using Euclidean Algorithm
+    while Y != 0:
+        # Find remainder
+        remainder = X % Y
+
+        # Move Y to X
+        X = Y
+
+        # Move remainder to Y
+        Y = remainder
+
+    # X contains the GCD
+    print(X)
