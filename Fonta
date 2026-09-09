@@ -1,0 +1,6 @@
+S = input()
+
+if S[2] == 'n' and S[3] == 't' and S[4] == 'a':
+    print("YES")
+else:
+    print("NO")
