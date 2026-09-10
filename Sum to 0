@@ -1,0 +1,38 @@
+# Read number of test cases
+T = int(input())
+
+# Run for each test case
+for _ in range(T):
+
+    # Read the size of the array
+    n = int(input())
+
+    # If n = 1, it is impossible
+    # because one non-zero number cannot have sum 0
+    if n == 1:
+        print(-1)
+
+    # If n is even
+    # We can make pairs: 1 + (-1) = 0
+    elif n % 2 == 0:
+
+        # Create n/2 pairs of [1, -1]
+        ans = [1, -1] * (n // 2)
+
+        # Print the array
+        print(*ans)
+
+    # If n is odd and n >= 3
+    else:
+
+        # First three numbers have sum:
+        # 1 + 2 + (-3) = 0
+        ans = [1, 2, -3]
+
+        # Remaining elements are even in number,
+        # so add pairs [1, -1]
+        for _ in range((n - 3) // 2):
+            ans.extend([1, -1])
+
+        # Print the answer
+        print(*ans)
