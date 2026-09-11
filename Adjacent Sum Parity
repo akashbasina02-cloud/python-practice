@@ -1,0 +1,15 @@
+
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    B = list(map(int, input().split()))
+
+    # Count the number of 1s
+    ones = sum(B)
+
+    # Number of 1s must be even
+    if ones % 2 == 0:
+        print("YES")
+    else:
+        print("NO")
