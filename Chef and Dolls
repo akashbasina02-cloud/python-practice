@@ -1,0 +1,18 @@
+# Read number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read number of dolls
+    N = int(input())
+
+    ans = 0
+
+    # Read all doll types
+    for i in range(N):
+        doll = int(input())
+
+        # XOR removes pairs
+        ans = ans ^ doll
+
+    # The remaining value is the doll without a pair
+    print(ans)
