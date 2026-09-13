@@ -1,0 +1,12 @@
+# cook your dish here
+T = int(input())
+
+for _ in range(T):
+    N, X = map(int, input().split())
+
+    # If N is even, we can obtain any smaller X.
+    # If N is odd, X must be odd.
+    if N % 2 == 0 or X % 2 == 1:
+        print("YES")
+    else:
+        print("NO")
