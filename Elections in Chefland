@@ -1,0 +1,20 @@
+T = int(input())
+
+for _ in range(T):
+    XA, XB, XC = map(int, input().split())
+
+    # Check if Party A has more than 50 votes
+    if XA > 50:
+        print("A")
+
+    # Check if Party B has more than 50 votes
+    elif XB > 50:
+        print("B")
+
+    # Check if Party C has more than 50 votes
+    elif XC > 50:
+        print("C")
+
+    # No party has a clear majority
+    else:
+        print("NOTA")
