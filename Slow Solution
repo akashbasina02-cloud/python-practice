@@ -1,0 +1,19 @@
+T = int(input())
+
+for _ in range(T):
+    maxT, maxN, sumN = map(int, input().split())
+
+    # Number of full maxN values we can take
+    full = min(maxT, sumN // maxN)
+
+    # Remaining value after using full maxN values
+    remaining = sumN - full * maxN
+
+    # Calculate answer
+    ans = full * (maxN * maxN)
+
+    # If we have another test case, add the remaining value
+    if full < maxT and remaining > 0:
+        ans += remaining * remaining
+
+    print(ans)
