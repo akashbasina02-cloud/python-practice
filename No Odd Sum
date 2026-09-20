@@ -1,0 +1,16 @@
+# cook your dish here
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+
+    ones = A.count(1)
+    twos = A.count(2)
+
+    if ones % 2 == 0:
+        ans = min(ones // 2, twos)
+    else:
+        ans = twos
+
+    print(ans)
