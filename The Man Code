@@ -1,0 +1,13 @@
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+
+    maximum = (N + 1) // 2
+
+    if N == 1:
+        minimum = 1
+    else:
+        minimum = N // 2
+
+    print(maximum, minimum)
