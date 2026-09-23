@@ -1,0 +1,23 @@
+# cook your dish here
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+
+    used = 0
+    possible = True
+
+    for x in A:
+        # If x shares any bit with a previous number
+        if used & x:
+            possible = False
+            break
+
+        # Add all bits of x to used
+        used |= x
+
+    if possible:
+        print("Yes")
+    else:
+        print("No")
