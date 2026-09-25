@@ -1,0 +1,13 @@
+# cook your dish here
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    S = input()
+
+    ones = S.count('1')
+    zeros = S.count('0')
+
+    answer = min(ones, zeros + 1)
+
+    print(answer)
