@@ -1,0 +1,46 @@
+from collections import deque
+
+T = int(input())
+
+for _ in range(T):
+    N, P = map(int, input().split())
+    S = input().strip()
+
+    # State = (position, reversals)
+    queue = deque()
+    queue.append((P, 0))
+
+    # visited[position] = minimum reversals used
+    visited = [float('inf')] * (N + 2)
+    visited[P] = 0
+
+    answer = float('inf')
+
+    while queue:
+        pos, cost = queue.popleft()
+
+        if pos == 0 or pos == N + 1:
+            answer = min(answer, cost)
+            continue
+
+        # Original direction
+        if S[pos - 1] == 'L':
+            next_pos = pos - 1
+        else:
+            next_pos = pos + 1
+
+        if cost < visited[next_pos]:
+            visited[next_pos] = cost
+            queue.append((next_pos, cost))
+
+        # Reversed direction
+        if S[pos - 1] == 'L':
+            next_pos = pos + 1
+        else:
+            next_pos = pos - 1
+
+        if cost + 1 < visited[next_pos]:
+            visited[next_pos] = cost + 1
+            queue.append((next_pos, cost + 1))
+
+    print(answer)
