@@ -1,0 +1,18 @@
+# cook your dish here
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+
+    # Find the maximum frequency
+    max_count = 0
+
+    for x in A:
+        count = A.count(x)
+        max_count = max(max_count, count)
+
+    # Remove all cards except the most frequent value
+    answer = N - max_count
+
+    print(answer)
