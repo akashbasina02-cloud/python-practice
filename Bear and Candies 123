@@ -1,0 +1,21 @@
+T = int(input())
+
+for _ in range(T):
+    A, B = map(int, input().split())
+
+    candies = 1
+
+    while True:
+        if candies % 2 == 1:      # Limak's turn
+            if A < candies:
+                print("Bob")
+                break
+            A -= candies
+
+        else:                    # Bob's turn
+            if B < candies:
+                print("Limak")
+                break
+            B -= candies
+
+        candies += 1
