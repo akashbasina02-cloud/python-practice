@@ -1,0 +1,16 @@
+# cook your dish here
+from math import gcd
+
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+
+    players = list(range(1, N + 1))
+
+    # Sort by:
+    # 1. GCD in descending order
+    # 2. Player number in ascending order
+    players.sort(key=lambda x: (-gcd(x, N), x))
+
+    print(*players)
