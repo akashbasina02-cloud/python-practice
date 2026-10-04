@@ -1,0 +1,12 @@
+# cook your dish here
+T = int(input())
+
+for _ in range(T):
+    A, B, C, D, E = map(int, input().split())
+
+    if (A <= E and B + C <= D) or \
+       (B <= E and A + C <= D) or \
+       (C <= E and A + B <= D):
+        print("YES")
+    else:
+        print("NO")
