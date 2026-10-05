@@ -1,0 +1,10 @@
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+
+    mn = min(A)
+    mx = max(A)
+
+    print(mx - mn - 1 if mx > mn else 0)
