@@ -1,0 +1,12 @@
+# cook your dish here
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+
+    odd = (N + 1) // 2
+    even = N // 2
+
+    ans = 2 * odd * even
+
+    print(ans)
