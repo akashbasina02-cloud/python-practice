@@ -1,0 +1,17 @@
+# cook your dish here
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    p = list(map(int, input().split()))
+
+    pos1 = p.index(1)
+    posn = p.index(n)
+
+    ans = pos1 + (n - 1 - posn)
+
+    if posn < pos1:
+        ans -= 1
+
+    print(ans)
