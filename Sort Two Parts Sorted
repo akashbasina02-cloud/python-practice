@@ -1,6 +1,7 @@
+
 class Solution:
-    def sortTwoParts(self, arr):
-        # Sort the entire array in ascending order
+    def mergeTwoParts(self, arr):
+        # Sort the array in ascending order
         arr.sort()
 
         # Return the sorted array
