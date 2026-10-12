@@ -1,0 +1,12 @@
+
+class Solution:
+    def arrayPairSum(self, nums: List[int]) -> int:
+        nums.sort()  # Sort the array in ascending order
+
+        total = 0  # Stores the sum of minimum values
+
+        # Visit every second element starting from index 0
+        for i in range(0, len(nums), 2):
+            total += nums[i]  # Add the smaller value of each pair
+
+        return total  # Return the maximum possible sum
