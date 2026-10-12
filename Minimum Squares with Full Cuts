@@ -1,0 +1,24 @@
+
+class Solution:
+    def minSquares(self, n, m):
+        count = 0  # Stores the total number of squares
+
+        # Continue until the remaining paper becomes zero
+        while n > 0 and m > 0:
+
+            if n > m:
+                # Count how many m x m squares fit along n
+                count += n // m
+
+                # Update n with the remaining length
+                n = n % m
+
+            else:
+                # Count how many n x n squares fit along m
+                count += m // n
+
+                # Update m with the remaining length
+                m = m % n
+
+        # Return the minimum number of squares formed
+        return count
