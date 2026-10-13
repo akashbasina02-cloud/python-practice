@@ -1,0 +1,19 @@
+
+class Solution:
+    def update(self, n, updates):
+
+        # Create an array of n zeros
+        arr = [0] * n
+
+        # Count how many updates start at each position
+        for j in updates:
+            # Convert the 1-based index to 0-based index
+            arr[j - 1] += 1
+
+        # Each update affects its starting position
+        # and every position after it
+        for i in range(1, n):
+            arr[i] += arr[i - 1]
+
+        # Return the final updated array
+        return arr
