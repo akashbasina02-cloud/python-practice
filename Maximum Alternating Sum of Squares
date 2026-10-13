@@ -1,0 +1,23 @@
+
+class Solution:
+    def maxAlternatingSum(self, nums: List[int]) -> int:
+
+        # Sort the numbers by their absolute values
+        nums.sort(key=abs)
+
+        # Calculate the square of each number
+        squares = [num * num for num in nums]
+
+        # The largest squares should be added,
+        # and the smallest squares should be subtracted
+        n = len(squares)
+        k = (n + 1) // 2
+
+        # Add the largest k squares
+        total = sum(squares[n - k:])
+
+        # Subtract the remaining smaller squares
+        total -= sum(squares[:n - k])
+
+        # Return the maximum alternating score
+        return total
