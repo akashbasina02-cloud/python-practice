@@ -1,0 +1,33 @@
+
+# Read the number of test cases
+t = int(input())
+
+# Process each test case
+for _ in range(t):
+
+    # Read the array size N and the target OR value Y
+    n, y = map(int, input().split())
+
+    # Read the array elements
+    a = list(map(int, input().split()))
+
+    # Initialize OR result to 0
+    result = 0
+
+    # Find the bitwise OR of all array elements
+    for num in a:
+        result |= num
+
+    # Check whether the array already contains a bit
+    # that is 1 in result but 0 in Y
+    if (result | y) != y:
+        # It is impossible to remove existing set bits
+        print(-1)
+
+    else:
+        # Find the missing bits needed to make OR equal Y
+        # XOR gives the bits that are present in Y but not result
+        x = y ^ result
+
+        # Print the minimum possible value of X
+        print(x)
