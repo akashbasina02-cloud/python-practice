@@ -1,0 +1,18 @@
+# cook your dish here
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    E, K = map(int, input().split())
+
+    count = 0
+
+    # Continue while energy is greater than zero
+    while E > 0:
+        count += 1
+        E = E // K  # Energy transferred to the next level
+
+    # Print the maximum food chain length
+    print(count)
