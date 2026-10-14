@@ -1,0 +1,16 @@
+
+class Solution:
+    def maxSumOfSquares(self, num: int, sum: int) -> str:
+        # Not possible if the digit sum exceeds 9 * num
+        if sum > 9 * num:
+            return ""
+
+        result = []
+
+        # Put the largest possible digit first
+        for i in range(num):
+            digit = min(9, sum)
+            result.append(str(digit))
+            sum -= digit
+
+        return "".join(result)
