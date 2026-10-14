@@ -1,0 +1,26 @@
+
+class Solution:
+    def findRollOut(self, s, roll):
+        n = len(s)
+
+        # Difference array to count rolls efficiently
+        diff = [0] * (n + 1)
+
+        for r in roll:
+            diff[0] += 1
+            diff[r] -= 1
+
+        chars = list(s)
+        shift = 0
+
+        for i in range(n):
+            # Calculate the total rolls affecting this position
+            shift += diff[i]
+            shift %= 26
+
+            # Shift the character and wrap around after z
+            chars[i] = chr(
+                (ord(chars[i]) - ord('a') + shift) % 26 + ord('a')
+            )
+
+        return ''.join(chars)
