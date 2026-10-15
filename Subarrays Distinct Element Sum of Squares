@@ -1,0 +1,17 @@
+class Solution:
+    def sumCounts(self, nums: List[int]) -> int:
+        total = 0
+        n = len(nums)
+
+        # Choose the starting index
+        for i in range(n):
+            distinct = set()
+
+            # Extend the subarray to the right
+            for j in range(i, n):
+                distinct.add(nums[j])
+
+                # Square the number of distinct elements
+                total += len(distinct) * len(distinct)
+
+        return total
