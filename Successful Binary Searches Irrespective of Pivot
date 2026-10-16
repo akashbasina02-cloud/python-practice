@@ -1,0 +1,22 @@
+
+class Solution:
+    def countAlwaysFound(self, arr):
+        n = len(arr)
+        count = 0
+
+        max_left = float('-inf')
+        min_right = [float('inf')] * n
+
+        # Find the minimum element to the right of each index
+        for i in range(n - 2, -1, -1):
+            min_right[i] = min(min_right[i + 1], arr[i + 1])
+
+        # Count elements greater than all left elements
+        # and smaller than all right elements
+        for i in range(n):
+            if arr[i] > max_left and arr[i] < min_right[i]:
+                count += 1
+
+            max_left = max(max_left, arr[i])
+
+        return count
