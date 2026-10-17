@@ -1,0 +1,43 @@
+
+class Solution:
+    def isItPossible(self, s1, s2):
+        # Both strings must contain the same A and B characters
+        if s1.replace('#', '') != s2.replace('#', ''):
+            return False
+
+        n = len(s1)
+        m = len(s2)
+
+        i = 0
+        j = 0
+
+        while i < n and j < m:
+            # Skip empty positions in s1
+            while i < n and s1[i] == '#':
+                i += 1
+
+            # Skip empty positions in s2
+            while j < m and s2[j] == '#':
+                j += 1
+
+            # If either string has no more A/B characters,
+            # both must have finished
+            if i == n or j == m:
+                return i == n and j == m
+
+            # The order of A and B cannot change
+            if s1[i] != s2[j]:
+                return False
+
+            # A can move only left
+            if s1[i] == 'A' and j > i:
+                return False
+
+            # B can move only right
+            if s1[i] == 'B' and j < i:
+                return False
+
+            i += 1
+            j += 1
+
+        return True
