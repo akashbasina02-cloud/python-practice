@@ -5,7 +5,22 @@ for _ in range(t):
     n = int(input())
     s = input().strip()
 
-    if s[0] == s[1] and s[n - 1] == s[n - 2]:
-        print("Yes")
-    else:
-        print("No")
+    possible = True
+    i = 0
+
+    while i < n:
+        if s[i] == '1':
+            start = i
+
+            while i < n and s[i] == '1':
+                i += 1
+
+            length = i - start
+
+            if length < 3:
+                possible = False
+                break
+        else:
+            i += 1
+
+    print("Yes" if possible else "No")
