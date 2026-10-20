@@ -1,0 +1,19 @@
+
+class Solution:
+    def lexicographicallyLargest(self, arr):
+        n = len(arr)
+        i = 0
+
+        while i < n:
+            j = i
+
+            # Find consecutive elements with the same parity
+            while j < n and arr[j] % 2 == arr[i] % 2:
+                j += 1
+
+            # Sort the group in descending order
+            arr[i:j] = sorted(arr[i:j], reverse=True)
+
+            i = j
+
+        return arr
