@@ -1,0 +1,31 @@
+
+from typing import List
+
+class Solution:
+    def minOperations(self, nums: List[int]) -> int:
+        n = len(nums)
+        zero = nums.index(0)
+
+        # Check increasing order while moving forward
+        inc = True
+        for i in range(n):
+            if nums[(zero + i) % n] != i:
+                inc = False
+                break
+
+        # Check increasing order while moving backward
+        dec = True
+        for i in range(n):
+            if nums[(zero - i) % n] != i:
+                dec = False
+                break
+
+        ans = float('inf')
+
+        if inc:
+            ans = min(ans, zero, n - zero + 2)
+
+        if dec:
+            ans = min(ans, zero + 2, n - zero)
+
+        return -1 if ans == float('inf') else ans
