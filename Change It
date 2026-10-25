@@ -1,0 +1,9 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+
+    max_freq = max(a.count(x) for x in set(a))
+
+    print(n - max_freq)
