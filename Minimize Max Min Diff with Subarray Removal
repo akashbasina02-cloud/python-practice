@@ -1,0 +1,50 @@
+
+class Solution:
+    def minDiff(self, k, arr):
+        n = len(arr)
+
+        if k == 0:
+            return max(arr) - min(arr)
+
+        # Prefix minimum and maximum
+        pmin = [0] * n
+        pmax = [0] * n
+
+        pmin[0] = pmax[0] = arr[0]
+
+        for i in range(1, n):
+            pmin[i] = min(pmin[i - 1], arr[i])
+            pmax[i] = max(pmax[i - 1], arr[i])
+
+        # Suffix minimum and maximum
+        smin = [0] * n
+        smax = [0] * n
+
+        smin[n - 1] = smax[n - 1] = arr[n - 1]
+
+        for i in range(n - 2, -1, -1):
+            smin[i] = min(smin[i + 1], arr[i])
+            smax[i] = max(smax[i + 1], arr[i])
+
+        ans = float('inf')
+
+        # Remove every subarray of length k
+        for i in range(n - k + 1):
+            left = i - 1
+            right = i + k
+
+            if left < 0:
+                # Remaining elements are on the right
+                diff = smax[right] - smin[right]
+            elif right >= n:
+                # Remaining elements are on the left
+                diff = pmax[left] - pmin[left]
+            else:
+                # Remaining elements are on both sides
+                mx = max(pmax[left], smax[right])
+                mn = min(pmin[left], smin[right])
+                diff = mx - mn
+
+            ans = min(ans, diff)
+
+        return ans
