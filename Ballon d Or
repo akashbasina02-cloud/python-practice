@@ -1,0 +1,13 @@
+
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+
+    count = A.count(2)
+
+    if count % 8 == 0:
+        print("YES")
+    else:
+        print("NO")
