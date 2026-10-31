@@ -1,0 +1,19 @@
+
+class Solution:
+    def maxPackages(self, arr, totalTime):
+        k = totalTime
+
+        # Calculate the first window sum
+        window_sum = sum(arr[:k])
+
+        # Store the maximum sum
+        ans = window_sum
+
+        # Slide the window
+        for i in range(k, len(arr)):
+            window_sum += arr[i]
+            window_sum -= arr[i - k]
+
+            ans = max(ans, window_sum)
+
+        return ans
