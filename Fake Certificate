@@ -1,0 +1,23 @@
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    s = input()
+
+    # Count existing present days
+    ones = s.count('1')
+
+    # Find the longest continuous group of zeros
+    max_zeros = 0
+    current = 0
+
+    for ch in s:
+        if ch == '0':
+            current += 1
+            max_zeros = max(max_zeros, current)
+        else:
+            current = 0
+
+    # Maximum attendance
+    print(ones + max_zeros)
