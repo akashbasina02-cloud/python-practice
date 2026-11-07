@@ -1,0 +1,30 @@
+
+class Solution:
+    def generateUsernames(self, arr):
+        used = set(arr)
+        assigned = set()
+        count = {}
+
+        ans = []
+
+        for name in arr:
+            if name not in assigned:
+                ans.append(name)
+                assigned.add(name)
+
+            else:
+                if name not in count:
+                    count[name] = 1
+
+                while name + str(count[name]) in used:
+                    count[name] += 1
+
+                new_name = name + str(count[name])
+
+                ans.append(new_name)
+                used.add(new_name)
+                assigned.add(new_name)
+
+                count[name] += 1
+
+        return ans
