@@ -1,0 +1,18 @@
+
+class Solution:
+    def getCount(self, s, k):
+        freq = {}
+
+        # Count the number of groups for each character
+        for i in range(len(s)):
+            if i == 0 or s[i] != s[i - 1]:
+                freq[s[i]] = freq.get(s[i], 0) + 1
+
+        # Count characters having exactly k groups
+        ans = 0
+
+        for ch in freq:
+            if freq[ch] == k:
+                ans += 1
+
+        return ans
