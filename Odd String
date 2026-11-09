@@ -1,0 +1,15 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    s = input()
+
+    freq = {}
+
+    for ch in s:
+        freq[ch] = freq.get(ch, 0) + 1
+
+    if max(freq.values()) <= 2:
+        print("YES")
+    else:
+        print("NO")
