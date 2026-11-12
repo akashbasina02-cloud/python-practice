@@ -1,0 +1,24 @@
+
+class Solution:
+    def minDiff(self, root, k):
+        ans = float('inf')
+
+        curr = root
+
+        while curr:
+            # Calculate absolute difference
+            ans = min(ans, abs(curr.data - k))
+
+            # Exact match found
+            if curr.data == k:
+                return 0
+
+            # Move left
+            elif k < curr.data:
+                curr = curr.left
+
+            # Move right
+            else:
+                curr = curr.right
+
+        return ans
