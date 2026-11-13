@@ -1,0 +1,29 @@
+class Solution:
+    def findCommon(self, r1, r2):
+        a, b = [], []
+
+        def inorder(root, arr):
+            if root is None:
+                return
+
+            inorder(root.left, arr)
+            arr.append(root.data)
+            inorder(root.right, arr)
+
+        inorder(r1, a)
+        inorder(r2, b)
+
+        ans = []
+        i = j = 0
+
+        while i < len(a) and j < len(b):
+            if a[i] == b[j]:
+                ans.append(a[i])
+                i += 1
+                j += 1
+            elif a[i] < b[j]:
+                i += 1
+            else:
+                j += 1
+
+        return ans
