@@ -1,0 +1,10 @@
+import math
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+
+    h = int((math.sqrt(1 + 8 * n) - 1) // 2)
+
+    print(h)
