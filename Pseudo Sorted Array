@@ -1,0 +1,31 @@
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+
+    # Find positions where the array is decreasing
+    pos = []
+
+    for i in range(n - 1):
+        if a[i] > a[i + 1]:
+            pos.append(i)
+
+    if len(pos) == 0:
+        print("YES")
+
+    elif len(pos) == 1:
+        i = pos[0]
+
+        # Swap adjacent elements
+        a[i], a[i + 1] = a[i + 1], a[i]
+
+        # Check whether the entire array is sorted
+        if all(a[j] <= a[j + 1] for j in range(n - 1)):
+            print("YES")
+        else:
+            print("NO")
+
+    else:
+        print("NO")
