@@ -1,0 +1,22 @@
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+
+    if sum(a) % 2 == 0:
+        print(n)
+    else:
+        first_odd = -1
+        last_odd = -1
+
+        for i in range(n):
+            if a[i] % 2 == 1:
+                if first_odd == -1:
+                    first_odd = i
+                last_odd = i
+
+        ans = max(n - first_odd - 1, last_odd)
+
+        print(ans)
