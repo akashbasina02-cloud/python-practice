@@ -1,0 +1,18 @@
+# cook your dish here
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+
+    x = n + 1
+
+    while True:
+        a = sum(int(d) for d in str(n))
+        b = sum(int(d) for d in str(x))
+
+        if a % 2 != b % 2:
+            print(x)
+            break
+
+        x += 1
